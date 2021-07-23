@@ -1,0 +1,34 @@
+{
+    "init": {
+        "name": "Initialize",
+        "script": "installers/initialize.py"
+    },
+    "base": {
+        "name": "Base packages",
+        "script": "installers/base.py",
+        "packages": [
+            "base-devel",
+            "clang",
+            ""
+        ]
+    },
+    "custom": {
+        "name": "AUR helper",
+        "script": "installers/helper.py"
+    },
+    "pacman": {
+        "name": "Pacman packages",
+        "script": "installers/pacman.py",
+        "packages": [
+            "sddm",
+            "plasma"
+        ]
+    },
+    "yay": {
+        "name": "AUR packages",
+        "script": "installers/yay.py",
+        "packages": [
+
+        ]
+    }
+}
