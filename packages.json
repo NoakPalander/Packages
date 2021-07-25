@@ -1,34 +1,62 @@
-{
-    "init": {
-        "name": "Initialize",
-        "script": "installers/initialize.py"
+[
+    {
+        "name": "Updates installed packages",
+        "command": "sudo pacman -Syyu"
     },
-    "base": {
-        "name": "Base packages",
-        "script": "installers/base.py",
-        "packages": [
-            "base-devel",
-            "clang",
-            ""
-        ]
-    },
-    "custom": {
-        "name": "AUR helper",
-        "script": "installers/helper.py"
-    },
-    "pacman": {
+    {
         "name": "Pacman packages",
         "script": "installers/pacman.py",
         "packages": [
+            "networkmanager",
+            "base-devel",
+            "clang",
+            "gcc",
+            "cmake",
+            "ninja",
             "sddm",
-            "plasma"
+            "plasma",
+            "xorg",
+            "qt5",
+            "qt6",
+            "kvantum-qt5",
+            "eog",
+            "mpv",
+            "neofetch"
         ]
     },
-    "yay": {
+    {
+        "name": "AUR helper",
+        "script": "installers/helper.py"
+    },
+    {
         "name": "AUR packages",
         "script": "installers/yay.py",
         "packages": [
-
+            "latte-dock-git",
+            "discord",
+            "discord-ptb",
+            "zsh",
+            "konsole",
+            "dolphin",
+            "jetbrains-toolbox",
+            "protonvpn",
+            "noto-fonts",
+            "noto-fonts-emoji",
+            "noto-fonts-cjk",
+            "noto-fonts-extra",
+            "spectacle"
         ]
+    },
+    {
+        "name": "Doas",
+        "script": "installers/doas.py"
+    },
+    {
+        "name": "Doom",
+        "script": "installers/doom.py"
+    },
+    {
+        "name": "Oh my zsh",
+        "script": "installers/zsh.py"
     }
-}
+]
